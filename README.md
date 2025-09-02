@@ -110,7 +110,7 @@ The app simulates a **real-world assistance platform**, where Users can post hel
 
 1. **Clone the repo** into Android Studio:  
    ```bash
-   git clone https://github.com/yourusername/HelpMe-App.git
+   git clone https://github.com/MuhammadAL-Bothom/HelpMe-App
 
 Firebase Setup
 
