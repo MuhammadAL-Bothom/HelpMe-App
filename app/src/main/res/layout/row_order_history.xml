@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#FFFFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#7F7F7F"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/rowName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR HELPER"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:id="@+id/rowProfession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SERVICE"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFE082"/>
+
+        <!-- Stars are added/updated in code -->
+        <LinearLayout
+            android:id="@+id/rowStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#FFFFFFFF"/>
+</LinearLayout>

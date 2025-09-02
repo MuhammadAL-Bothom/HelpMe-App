@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Poster background (50% opacity) -->
+    <ImageView
+        android:id="@+id/bgPoster"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/splash"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Title -->
+
+    <!-- USER square (50% opacity) -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:text="HELP ME APP"
+        android:textColor="#C62028"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- HELPER square (50% opacity) -->
+
+    <!-- “CHOOSE YOUR ACCOUNT” -->
+
+    <!-- Footer tagline -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/helperCard"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="140dp"
+        android:alpha="0.85"
+        android:background="@drawable/box3"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/userCard"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <TextView
+            android:id="@+id/helperLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HELPER"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userCard"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.85"
+        android:background="@drawable/box2"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toStartOf="@id/helperCard"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <TextView
+            android:id="@+id/userLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USER"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:layout_marginBottom="10dp"
+        android:letterSpacing="0.03"
+        android:paddingTop="24dp"
+        android:text="CHOOSE YOUR ACCOUNT"
+        android:textAlignment="center"
+        android:textColor="#C62028"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tagline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/helperCard"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:letterSpacing="0.02"
+        android:paddingBottom="16dp"
+        android:text="YOUR CAR IN THE RIGHT HANDS"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

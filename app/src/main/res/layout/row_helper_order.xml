@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="12dp"
+    android:padding="12dp"
+    android:background="#777777">
+
+    <TextView
+        android:id="@+id/tvNameNeeds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMAD ALI    NEEDS HELP"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFFFF"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="400M AWAY FROM YOU"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#FFD4E157"
+        android:gravity="center_horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_marginEnd="50dp"
+            android:id="@+id/btnDeny"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/cancel"
+            android:contentDescription="@string/places_cancel"/>
+
+
+
+        <ImageButton
+            android:layout_marginStart="20dp"
+            android:id="@+id/btnAccept"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/tick2" />
+    </LinearLayout>
+
+</LinearLayout>

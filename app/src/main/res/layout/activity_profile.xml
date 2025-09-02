@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <!-- Top: title + (optional) role subtitle -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="PROFILE"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textColor="#C62028"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/roleTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="HELPER"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"/>
+
+    <!-- SHARED FIELDS -->
+    <EditText
+        android:id="@+id/fullName"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="FULL NAME"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/roleTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="EMAIL"
+        android:inputType="textEmailAddress"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/fullName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <!-- Password cannot be read; leave empty with hint ********. If user enters value while saving, we update password -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="********"
+        android:inputType="textPassword"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <!-- USER-ONLY -->
+    <EditText
+        android:id="@+id/carType"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="CAR TYPE"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <EditText
+        android:id="@+id/carColor"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="CAR COLOR"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/carType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <EditText
+        android:id="@+id/carModel"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="CAR MODEL"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/carColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <!-- HELPER-ONLY (start GONE) -->
+    <EditText
+        android:id="@+id/expType"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="TYPE OF EXPERIENCE"
+        android:visibility="gone"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <EditText
+        android:id="@+id/expLevel"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="LEVEL OF EXPERIENCE"
+        android:visibility="gone"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/expType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <EditText
+        android:id="@+id/locationEt"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="LOCATION"
+        android:visibility="gone"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/expLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <!-- Barrier under the last role-specific field -->
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/roleBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="carModel,locationEt"/>
+
+    <!-- SHARED: Phone -->
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/box4"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#C62028"
+        android:textColorHint="#C62028"
+        android:hint="PHONE NUMBER"
+        android:inputType="phone"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/roleBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <!-- EDIT / SAVE button -->
+    <TextView
+        android:id="@+id/primaryBtn"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="EDIT"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:background="#DDDDDD"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
